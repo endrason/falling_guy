@@ -7,7 +7,7 @@ local relative_falling_speed = 500 -- update value as the falling speed increase
 
 function love.load()
     -- set window and viewport properties 
-    love.window.setTitle("falling guy")
+    love.window.setTitle("Falling Guy")
     love.window.setMode(900, 800)
 
     love.graphics.setBackgroundColor(0.33, 0.33, 0.33)
@@ -29,6 +29,7 @@ end
 
 function love.draw()
     -- draw relative falling speed parameter and 
-    love.graphics.print(falling_speed_state)
+    love.graphics.print("Falling speed:")
+    love.graphics.print(guy_vertical, 0, 15)
     love.graphics.draw(guy_sprite, guy_horizontal, guy_vertical, 0, guy_scale)
 end
